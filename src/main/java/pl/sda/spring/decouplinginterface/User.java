@@ -17,6 +17,7 @@ public class User {
 
     private final String name = "janek";
 
+    @Autowired
     private List<Child> children;
 
 
@@ -27,6 +28,9 @@ public class User {
 
     public String getMoney() throws Exception {
         if(userData.getName().equals(this.name)) {
+            children.stream()
+                    .map(Child::getName)
+                    .forEach(System.out::println);
             return transferable.transferMoney();
         } else {
             throw new Exception("no such user");
