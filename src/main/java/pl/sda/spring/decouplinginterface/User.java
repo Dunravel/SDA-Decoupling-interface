@@ -15,6 +15,10 @@ public class User {
 
     private final String name = "janek";
 
+    public User(UserData userData) {
+        this.userData = userData;
+    }
+
     public String getMoney() throws Exception {
         if(userData.getName().equals(this.name)) {
             return transferable.transferMoney();
