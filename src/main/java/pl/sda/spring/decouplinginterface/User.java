@@ -10,11 +10,12 @@ public class User {
     @Qualifier("daily")
     private Transferable transferable;
 
-    @Autowired
+    //@Autowired
     private UserData userData;
 
     private final String name = "janek";
 
+    @Autowired
     public User(UserData userData) {
         this.userData = userData;
     }
