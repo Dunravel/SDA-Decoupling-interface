@@ -10,6 +10,9 @@ public class User {
     @Qualifier("daily")
     private Transferable transferable;
 
+    @Autowired
+    private UserData userData;
+
     public String getMoney(){
         System.out.println(transferable.transferMoney());
         return transferable.transferMoney();
