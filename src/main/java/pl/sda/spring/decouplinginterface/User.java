@@ -13,8 +13,13 @@ public class User {
     @Autowired
     private UserData userData;
 
-    public String getMoney(){
-        System.out.println(transferable.transferMoney());
-        return transferable.transferMoney();
+    private final String name = "janek";
+
+    public String getMoney() throws Exception {
+        if(userData.getName().equals(this.name)) {
+            return transferable.transferMoney();
+        } else {
+            throw new Exception("no such user");
+        }
     }
 }

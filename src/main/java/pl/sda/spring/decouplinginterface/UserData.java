@@ -8,6 +8,6 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 public class UserData {
-    private String name;
-    private Integer age;
+    private String name = "janek";
+    private Integer age = 23;
 }
